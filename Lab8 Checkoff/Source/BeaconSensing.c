@@ -25,7 +25,7 @@ int arrayCounter = 0;
 // we will use Timer A in Wide Timer 0 to capture the beacon sensing input.
 // This code is templated from Lab 7, so Periodic Timer B has been commented out, but can be activated if necessary.
 
-void InitInputCapturePeriod( void ){
+void InitBeaconSensingCapture( void ){
 
   // start by enabling the clock to the timer (Wide Timer 0)
   HWREG(SYSCTL_RCGCWTIMER) |= SYSCTL_RCGCWTIMER_R0;
@@ -116,7 +116,7 @@ void InitInputCapturePeriod( void ){
   //HWREG(WTIMER0_BASE+TIMER_O_CTL) |= (TIMER_CTL_TBEN | TIMER_CTL_TBSTALL);
 }
 
-void InputCaptureResponse( void ){
+void BeaconSensedCaptureResponse( void ){
   uint32_t ThisCapture;
 // start by clearing the source of the interrupt, the input capture event
     HWREG(WTIMER0_BASE+TIMER_O_ICR) = TIMER_ICR_CAECINT;

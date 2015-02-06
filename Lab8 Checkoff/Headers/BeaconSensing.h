@@ -5,10 +5,10 @@
 #include <stdbool.h>
 
 //Init function
-void InitInputCapturePeriod( void );
+void InitBeaconSensingCapture( void );
 
 //Input Capture Response for use in E+S Framework
-void InputCaptureResponse( void );
+void BeaconSensedResponse( void );
 
 //Returns period in ticks
 uint32_t GetPeriod( void );

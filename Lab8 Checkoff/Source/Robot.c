@@ -168,7 +168,7 @@ ES_Event RunRobot( ES_Event ThisEvent )
 			InitSSI(); //Initialize Tiva as master on SSI0
 			InitMotors();
 			InitTapeSensor();
-			InitInputCapturePeriod();
+			InitBeaconSensingCapture();
 			ES_Timer_InitTimer(SPI_TIMER, SPI_TIME); 
 			RobotState = NORMAL;
       break;

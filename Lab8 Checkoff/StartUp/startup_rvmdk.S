@@ -80,7 +80,7 @@ __heap_limit
 ;******************************************************************************
         EXTERN  SysTickIntHandler
 			EXTERN SSIResponse
-			EXTERN InputCaptureResponse
+			EXTERN BeaconSensedResponse
 ;        EXTERN  UARTStdioIntHandler
 
 ;******************************************************************************
@@ -200,7 +200,7 @@ __Vectors
         DCD     0                           ; Reserved
         DCD     IntDefaultHandler           ; Timer 5 subtimer A
         DCD     IntDefaultHandler           ; Timer 5 subtimer B
-        DCD     InputCaptureResponse        ; Wide Timer 0 subtimer A
+        DCD     BeaconSensedResponse        ; Wide Timer 0 subtimer A
         DCD     IntDefaultHandler           ; Wide Timer 0 subtimer B
         DCD     IntDefaultHandler           ; Wide Timer 1 subtimer A
         DCD     IntDefaultHandler           ; Wide Timer 1 subtimer B
